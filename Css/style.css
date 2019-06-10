@@ -1,0 +1,146 @@
+body {
+    background: #c88ce1;
+    margin: 0;
+    color: gray;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header::after {
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/Fondo\ de\ fortnite.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    transition: all 1000ms;
+}
+
+.header:hover::after {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+.header:hover .header-content {
+      filter: blur(4px);
+      -webkit-filter: blur(4px);
+}
+.header-content {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -145px;
+    text-align: center;
+    width: 300px;
+    height:  350px;
+    transition: all 1000ms;
+}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+   font-size: 2rem;
+   color: #ab4fd2;
+}
+.text {
+    line-height: 1.7
+}
+
+.container {
+    width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+}
+.text-center {
+    text-align: center;
+    margin: auto;
+}
+
+.title2 {
+    text-align: left;
+    margin-right: 425px;
+    color: #ab4fd2;
+}
+.title3 {
+    color: #ab4fd2;
+}
+
+.bg-light {
+ background: white ;
+ color: #333;
+}
+
+.bg-dark {
+    background: #2f3542;
+    color: #fff;
+}
+
+.logos {
+    color: #ab4fd2;
+}
+.bg-violet {
+    color: #ab4fd2;
+    padding:  2.2rem;
+}
+
+footer p {
+   margin: 0;
+}
+
+@media(max-width: 560px) {
+    .header::after {
+        height: 50vh;
+       
+}
+
+.header-content {
+    top: 5%;
+    margin-top: 5px;
+}
+
+.header-content .logo{
+    height: 140px;
+    width: 140px;
+
+}
+
+.header-content .text {
+    display: none;
+}
+.service {
+    padding: 2rem 0;
+}
+
+.grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+}
+
+.services {
+    padding: 1.4rem 1rem;
+      }
+  }
+
+@media(max-height: 500px) {
+    .header-content .title, .header-content .text {
+          display: none;
+    }
+    .header-content { 
+        top: 0;
+    }
+}
